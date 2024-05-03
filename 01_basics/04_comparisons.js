@@ -15,3 +15,19 @@ console.log("2" === 2);
 console.log(null === undefined);
 console.log("luard" === "Luard");
 console.log("luard" === "LUARD");
+
+// js is a dynamically typed language 
+
+// primitive(7 types) and non primitive data tpyes
+// primitive(call by value waale datatypes): string, number, boolean, null,undefined, symbol,bigint
+
+// non primitive aka reference type (call by reference)
+// array ,objects, functions
+
+//symbol
+
+const id = Symbol('123')
+const anotherId = Symbol('123')
+console.log(id);
+console.log(anotherId);
+console.log(id === anotherId);
