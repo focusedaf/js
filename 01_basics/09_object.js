@@ -26,12 +26,75 @@ user.email = "abc@yahoo.com"
 
 
 user.greeting = function(){
-    console.log("hello user");
+   // console.log("hello user");
 }
 user.greetingTwo = function(){
-    console.log(`hello user, ${this.name}`);
+    //console.log(`hello user, ${this.name}`);
 }
-console.log(user.greeting); // function execute nahi hua bas uska reference aaya hai
-console.log(user.greetingTwo); // function execute nahi hua bas uska reference aaya hai
-console.log(user.greeting());// always use parenthesis with methods
-console.log(user.greetingTwo());// always use parenthesis with methods
+//console.log(user.greeting); // function execute nahi hua bas uska reference aaya hai
+// console.log(user.greetingTwo); // function execute nahi hua bas uska reference aaya hai
+// console.log(user.greeting());// always use parenthesis with methods
+// console.log(user.greetingTwo());// always use parenthesis with methods
+
+
+//singleton
+
+//const tinderUser = new Object() //singleton
+const tinderUser= {} //non- singleton
+
+tinderUser.id ="abc123"
+tinderUser.name ="joe"
+tinderUser.isLoggedIn=false
+
+//console.log(tinderUser);
+
+const googleUser ={
+  email:"abc@gmail.com",
+  fullName:{
+    userfullname:{
+      firstname:"luard",
+      lastname:"codes"
+    }
+  }
+}
+//console.log(googleUser.fullName.userfullname.firstname);
+
+const obj1 ={1:"a", 2:"b", 3:"c"}
+const obj2 ={4:"a", 5:"b", 6:"c"}
+//const obj3 ={obj1 ,obj2 }
+//const obj3 = Object.assign({},obj1,obj2) //assign() copies objects from target and source and assigns them to the target again its just like strcpy()
+const obj3 ={...obj1,...obj2}
+//console.log(obj3);
+
+const users =[{
+  id: 1,
+  email: "abc@gmail.com"
+
+},
+{
+  id: 2,
+  email: "abc123@gmail.com"
+
+},
+]
+users[1].email
+// console.log(tinderUser);
+
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser)); //key-value pair me output milta hai
+// console.log(tinderUser.hasOwnProperty(' isLogged'));
+
+
+//object de-structure and api
+
+const course = {
+  courseName: "js in hindi",
+  price:"999",
+  cousreInstructor:"hitesh"
+}
+//course.courseInstructor
+
+const {courseName: name} = course //by using ":" you can destructure a particular attribute
+//console.log(courseName);
+//console.log(name);
